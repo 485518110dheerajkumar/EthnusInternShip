@@ -1,3 +1,9 @@
+
+
+All Tasks :- https://485518110dheerajkumar.github.io/EthnusInternShip/index.html 
+
+
+
 Hello! 
 This is my Ethnus Internship Assignment task.
 you can see my all tasks just on clicking the links.
