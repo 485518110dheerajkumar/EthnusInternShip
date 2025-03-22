@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,145 +8,437 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
-    body{
-        background-color: black;
+    body {
+
         margin: 0;
         padding: 0;
     }
-    .main{
+
+    .main {
         padding: 1px;
         text-align: center;
         background-color: orange;
         justify-items: center;
         color: white;
-        
+
+
     }
-    .ls{
+
+    .ls {
         text-align: center;
         justify-items: center;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    .head{
+
+    .head {
         background-color: orange;
         width: 100%;
-        padding: 10px;
+        padding: 0px;
     }
-    .card{
-        border: 3px solid black;
-        color: red;
-        border-radius: 5px;
-        padding: 5px 5px;
-        background-color: rgb(67, 57, 57);
-        margin-top: 10em;
-        width: 28em;
-        filter: drop-shadow(20px 20px 20px red);
+
+    .card {
+        background-color: rgb(0, 187, 255);
+        color: white;
+        padding: 2em;
+        box-shadow: 10px 10px 20px aqua;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 4em;
+
     }
-    ul{
+
+    .card:hover {
+        background-color: #49e94e;
+        box-shadow: 10px 10px 20px #49e94e;
+    }
+
+    ul {
         list-style: none;
         display: flex;
-        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 2em;
 
     }
-    li a{
+
+    li a {
         text-decoration: none;
-        color: red;
+        color: white;
         font-weight: bold;
-        font-size: medium;
+        font-size: x-large;
 
     }
-    .myself{
+
+    li a:hover {
+        color: rgb(0, 0, 0);
+    }
+
+    .myself {
         display: flex;
         flex-wrap: wrap;
         justify-items: center;
         justify-content: space-between;
     }
-    .left{
+
+    .left {
         max-width: 50%;
         text-align: center;
     }
-    .left h1{
+
+    .left h1 {
         color: white;
         margin-top: 200px;
     }
-    .right{
-    
+
+    .right {
+
         margin-top: 100px;
         align-items: center;
     }
-    .right img{
+
+    .right img {
         height: 300px;
         width: 300px;
         border-radius: 50%;
         filter: drop-shadow(20px 20px 10px rgb(0, 208, 255));
     }
-    .data{
-        margin-top: 10em;
-        padding: 5em;
-        background-color: rgb(20, 133, 126) ;
-        height: 200px;
+
+    footer {
+        background-color: rgb(20, 133, 126);
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    .data li:hover {
+        color: orange;
+    }
+
+    /*  contect form */
+    #s4 {
+        margin-top: 4em;
+    }
+
+    .container {
+        background: #fff;
+        padding: 2em;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    textarea {
+        resize: none;
+        height: 100px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background: #28a745;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background: #218838;
+    }
+
+    #s3 {
+        color: white;
+        padding: 1em;
+    }
+
+    #s3 p {
+        font-size: xxx-large;
+        font-weight: bold;
+        color: white;
+        border-right: 3px solid rgb(0, 0, 0);
+        width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        animation: typingtask 9s steps(50, end) infinite forwards;
+    }
+
+    @keyframes typingtask {
+        0% {
+            width: 0%;
+        }
+
+        25% {
+            width: 15%;
+        }
+
+        75% {
+            width: 15%;
+        }
+
+        100% {
+            width: 0%;
+        }
+    }
+
+    #s1 p {
+        font-size: xxx-large;
+        font-weight: bold;
+        color: white;
+        border-right: 3px solid orange;
+        width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        animation: typing 9s steps(50, end) infinite forwards;
+    }
+
+    @keyframes typing {
+        0% {
+            width: 0%;
+        }
+
+        25% {
+            width: 100%;
+        }
+
+        75% {
+            width: 100%;
+        }
+
+        100% {
+            width: 0%;
+        }
+    }
+
+    .dataname p {
+        font-size: xxx-large;
+        font-weight: bold;
+        color: white;
+        border-right: 3px solid rgb(20, 133, 126);
+        width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        animation: typingfooter 9s steps(50, end) infinite forwards;
+    }
+
+    @keyframes typingfooter {
+        0% {
+            width: 0%;
+        }
+
+        25% {
+            width: 100%;
+        }
+
+        75% {
+            width: 100%;
+        }
+
+        100% {
+            width: 0%;
+        }
+    }
+
+    .data {
+        margin-top: 1em;
+        padding: 2em;
+        width: 40%;
         font-weight: bold;
         font-size: larger;
         color: white;
+        display: flex;
+        justify-content: space-around;
     }
-    .data li:hover{
-        color: orange;
+
+    #nav .nav {
+        background-color: cadetblue;
+        padding-left: 2em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #nav .nav .li {
+        margin-top: 1em;
+        padding-right: 2em;
+    }
+
+    #nav .nav .li ul li a {
+        color: white;
+
+    }
+
+    #nav .nav .li ul li a:hover {
+        color: rgb(255, 166, 2);
+    }
+
+    #s2,
+    #s3,
+    #s4 {
+        background-color: black;
+
+    }
+
+    .logo img {
+        mix-blend-mode: color-dodge;
+        height: 6em;
+
     }
 </style>
+
 <body>
-    <div class="main">
-        <h1>DHEERAJ KUMAR (22BSA10017)</h1>
-        <div class="head">
-            <h1>This is my all Tasks</h1>
+    <section id="nav">
+        <div class="nav">
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGgqdjfgjwHvP6defJKwBvVqpC09WuUiAKdQ&s"
+                    alt="">
+            </div>
+            <div class="li">
+                <ul>
+                    <li><a href="#s2">About me</a></li>
+                    <li><a href="#s3">All Tasks</a></li>
+                    <li><a href="#s4">Contact us</a></li>
+
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="myself">
-        <div class="left">
-            <h1 >I'M Dheeraj kumar and G-mail id is: " dheerajkumar2022@vitbhopal.ac.in" .</h1>
+    </section>
+
+    <section id="s1">
+        <div class="main">
+            <p>
+                DHEERAJ KUMAR (22BSA10017)
+            </p>
+            <div class="head">
+                <h1>This is my all Tasks</h1>
+            </div>
         </div>
-        <div class="right">
-            <img src="./WhatsApp Image 2025-02-14 at 17.50.18_6c0a54ef.jpg" alt="">
+    </section>
+
+    <section id="s2">
+        <div class="myself">
+            <div class="left">
+                <h1>I'M Dheeraj kumar and G-mail id is: " dheerajkumar2022@vitbhopal.ac.in" .</h1>
+            </div>
+            <div class="right">
+                <img src="./WhatsApp Image 2025-02-14 at 17.50.18_6c0a54ef.jpg" alt="">
+            </div>
         </div>
-    </div>
-    
-    <div class="ls">
-        <div class="card">
-            <h1>HTML TASKS</h1>
-            <ul>
-                <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/HtmlTask1.html">Task 1</a></li>
-                <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/HtmlTask2.html">Task 2</a></li>
-                <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/HtmlTask3.html">Task 3</a></li>
-                <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/HtmlTask4.html">Task 4</a></li>
-                <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/HtmlTask5.html">Task 5</a></li>
-            </ul>
+    </section>
+    <hr>
+    <section id="s3">
+        <p>All Tasks</p>
+        <div class="ls">
+            <div class="card">
+                <h1>HTML TASKS</h1>
+                <ul>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/HtmlTask1.html">Task 1</a>
+                    </li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/HtmlTask2.html">Task 2</a>
+                    </li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/HtmlTask3.html">Task 3</a>
+                    </li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/HtmlTask4.html">Task 4</a>
+                    </li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/HtmlTask5.html">Task 5</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <h1>CSS TASKS</h1>
+                <ul>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/CssTASK1.HTML">Task 1</a></li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/CssTASK2.HTML">Task 2</a></li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/CssTASK3.HTML">Task 3</a></li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/CssTASK4.HTML">Task 4</a></li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/CssTASK5.HTML">Task 5</a></li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/CssTASK6.HTML">Task 6</a></li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/CssTASK7.HTML">Task 7</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h1>BOOTSTRAP TASKS</h1>
+                <ul>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/BsTASK1.HTML">Task 1</a></li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/BsTASK2.HTML">Task 2</a></li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/BsTASK3.HTML">Task 3</a></li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/BsTASK4.HTML">Task 4</a></li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/BsTASK5.HTML">Task 5</a></li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/BsTASK6.HTML">Task 6</a></li>
+
+                </ul>
+            </div>
+            <div class="card">
+                <h1>JavaScript</h1>
+                <ul>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip//Javascript/Task1">Task1</a>
+                    </li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip//Javascript/Task2">Task 2</a>
+                    </li>
+                    <li><a
+                            href="https://485518110dheerajkumar.github.io/EthnusInternShip//Javascript/calculator.html">Task3</a>
+                    </li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip//Javascript/Task4">Task4</a>
+                    </li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip//Javascript/Task5">Task5</a>
+                    </li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip//Javascript/Task6">Task6</a>
+                    </li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip//Javascript/Task7">Task7</a>
+                    </li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip//Javascript/Task8">Task8</a>
+                    </li>
+                    <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/Javascript/Task9/">Task9</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="card">
-            <h1>CSS TASKS</h1>
-            <ul>
-                <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/CssTASK1.HTML">Task 1</a></li>
-                <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/CssTASK2.HTML">Task 2</a></li>
-                <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/CssTASK3.HTML">Task 3</a></li>
-                <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/CssTASK4.HTML">Task 4</a></li>
-                <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/CssTASK5.HTML">Task 5</a></li>
-                <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/CssTASK6.HTML">Task 6</a></li>
-                <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/CssTASK7.HTML">Task 7</a></li>
-            </ul>
         </div>
-        <div class="card">
-            <h1>BOOTSTRAP TASKS</h1>
-            <ul>
-                <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/BsTASK1.HTML">Task 1</a></li>
-                <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/BsTASK2.HTML">Task 2</a></li>
-                <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/BsTASK3.HTML">Task 3</a></li>
-                <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/BsTASK4.HTML">Task 4</a></li>
-                <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/BsTASK5.HTML">Task 5</a></li>
-                <li><a href="https://485518110dheerajkumar.github.io/EthnusInternShip/BsTASK6.HTML">Task 6</a></li>
-                
-            </ul>
+    </section>
+
+    <section id="s4">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
         </div>
-    </div>
-    </div>
+    </section>
     <footer>
         <div class="data">
             <ul>
@@ -154,9 +447,12 @@
                 <li>G-mail</li>
                 <li>About</li>
                 <li>Services</li>
-                
             </ul>
+        </div>
+        <div class="dataname">
+            <p>DHEERAJ KUMAR (22BSA10017)</p>
         </div>
     </footer>
 </body>
+
 </html>
