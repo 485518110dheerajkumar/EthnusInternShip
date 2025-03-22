@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form DHEERAJ KUMAR TASK8</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, pink, lightblue);
+            text-align: center;
+        }
+        form {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+        }
+        h2 {
+            color: blue;
+        }
+        input, select, textarea {
+            width: 90%;
+            padding: 5px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .for{
+            display: flex;
+            margin-top: 1em;
+            
+        }
+        label{
+            width: 15em;
+            text-align: center;
+        }
+        .forl{
+            display: flex;
+            gap: 10px;
+            
+        
+        }
+        span{
+            display: flex;
+            gap: 2em;
+            
+        }
+        .newd{
+            display: flex;
+            justify-content: space-around;
+        }
+        .links a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Registration Form</h2>
+    <form onsubmit="return validateForm()">
+        <div class="for">
+            <label for="">First Name:</label>
+            <input type="text" id="fname">
+        </div>
+        <div class="for">
+            <label for="">Last Name:</label>
+            <input type="text" id="fname">
+        </div>
+        <div class="for">
+            <label for="">Email:</label>
+            <input type="email" id="email">
+        </div>
+        
+        <div class="for">
+            <label for="">Password:</label>
+            <input type="password" id="password">
+        </div>
+        <div class="for">
+            <label for="">Re-enter Password:</label>
+            <input type="password" id="repassword">
+        </div>
+        <div class="forl">
+            <label for="">Gender:</label>
+            <span>
+                <input type="radio" name="gender" value="Male"> Male
+                <input type="radio" name="gender" value="Female"> Female
+            </span>
+        </div>
+        <div class="for">
+            <label for="">Age:</label>
+            <input type="number" id="age">
+        </div>
+        <div class="for">
+            <label for="">Phone Number:</label>
+            <input type="text" id="phone">
+        </div>
+        <div class="for">
+            <label for="">Address:</label>
+            <textarea id="address"></textarea>
+        </div>
+        <div class="for">
+            <label for="">State:</label>
+            <input type="text" id="state">
+        </div>
+        <div class="for">
+            <label for=""> Country:</label>
+            <select id="country">
+                <option value="">Choose your country</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+            </select><br>
+        </div>
+        <div class="forl">
+            <label for="">Languages known:</label>
+            <span>
+                <input type="checkbox" name="lang" value="English"> English
+                <input type="checkbox" name="lang" value="Kannada"> Kannada
+                <input type="checkbox" name="lang" value="Hindi"> Hindi
+                <input type="checkbox" name="lang" value="Telugu"> Telugu
+            </span>
+        </div>
+        <br>
+        <div class="newd">
+            <div class="forl">
+                <span>
+                    <input type="checkbox" id="declaration">
+                </span>
+                <p>I declare all details are true</p>
+            </div>
+            <div class="links">
+                <p>Log in to <a href=""> Ethnus </a> website</p>
+            </div>
+        </div>
+         
+
+        <button type="submit">REGISTER</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            let isValid = true;
+
+            function checkField(id, errorId) {
+                let value = document.getElementById(id).value;
+                if (value.trim() === "") {
+                    document.getElementById(errorId).style.visibility = "visible";
+                    isValid = false;
+                } else {
+                    document.getElementById(errorId).style.visibility = "hidden";
+                }
+            }
+
+            checkField("fname", "fnameError");
+            checkField("lname", "lnameError");
+            checkField("email", "emailError");
+            checkField("password", "passError");
+            checkField("age", "ageError");
+            checkField("phone", "phoneError");
+            checkField("address", "addressError");
+            checkField("state", "stateError");
+            checkField("country", "countryError");
+
+            let pass = document.getElementById("password").value;
+            let repass = document.getElementById("repassword").value;
+            if (pass !== repass || repass === "") {
+                document.getElementById("repassError").style.visibility = "visible";
+                isValid = false;
+            } else {
+                document.getElementById("repassError").style.visibility = "hidden";
+            }
+
+            return isValid;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Animation DHEERAJ KUMAR TASK7</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #train {
+            position: relative;
+            left: 0;
+            width: 250px;
+            transition: left 0.1s linear;
+            
+        }
+
+        h2 {
+            color: blue;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <img id="train" src="https://media.tenor.com/ZgIRCUMksogAAAAM/sing-crayon-shin-chan.gif" alt="Moving Train">
+    
+    <h2>Click the following buttons to handle animation</h2>
+
+    <button onclick="startTrain()">Start</button>
+    <button onclick="stopTrain()">Stop</button>
+
+    <script>
+        let train = document.getElementById("train");
+        let position = 0;
+        let interval;
+
+        function startTrain() {
+            if (!interval) {
+                interval = setInterval(() => {
+                    position += 5;
+                    train.style.left = position + "px";
+                    if (position > 550) {
+                        position = -550; // Reset position when it goes off-screen
+                    }
+                }, 50);
+            }
+        }
+
+        function stopTrain() {
+            clearInterval(interval);
+            interval = null;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse a Number DHEERAJ KUMAR TASK1</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+      input,
+      button {
+        margin: 10px;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid white;
+        border-radius: 4px;
+      }
+      .content{
+        background-color: orange;
+        color: white;
+        padding: 2em;
+        border-radius: 4px;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h2>Reverse a Number</h2>
+      <input type="number" id="numberInput" placeholder="Enter a number" />
+      <button onclick="reverseNumber()">Reverse</button>
+      <h3 id="result"></h3>
+    </div>
+    <script>
+      function reverseNumber() {
+        let num = document.getElementById("numberInput").value;
+        let reversedNum = parseInt(num.toString().split("").reverse().join(""));
+        document.getElementById("result").innerText =
+          "Reversed Number: " + reversedNum;
+      }
+    </script>
+  </body>
+</html>

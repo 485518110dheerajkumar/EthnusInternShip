@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication & Division</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            display: inline-block;
+            border: 1px solid black;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+        input {
+            margin: 5px;
+            padding: 5px;
+        }
+        button {
+            margin: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h3>Multiplication & Division</h3>
+        <label>1st Number: <input type="number" id="num1"></label><br>
+        <label>2nd Number: <input type="number" id="num2"></label><br>
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="divide()">Divide</button>
+        <h3>The Result Is:</h3>
+        <p id="result">-</p>
+    </div>
+
+    <script>
+        function multiply() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            if (!isNaN(num1) && !isNaN(num2)) {
+                document.getElementById("result").innerText = num1 * num2;
+            } else {
+                document.getElementById("result").innerText = "Please enter valid numbers!";
+            }
+        }
+
+        function divide() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            if (!isNaN(num1) && !isNaN(num2) && num2 !== 0) {
+                document.getElementById("result").innerText = num1 / num2;
+            } else if (num2 === 0) {
+                document.getElementById("result").innerText = "Cannot divide by zero!";
+            } else {
+                document.getElementById("result").innerText = "Please enter valid numbers!";
+            }
+        }
+    </script>
+
+</body>
+</html>

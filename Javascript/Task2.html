@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alphabetical Order Sorter DHEERAJ KUMAR TASK 2</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 50px;
+      }
+      input,
+      button {
+        margin: 10px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 4px;
+      }
+      button {
+        width: 5em;
+      }
+      .content{
+        background-color: rgb(255, 105, 105);
+        color: white;
+        border-radius: 4px;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h2>Sort String in Alphabetical Order</h2>
+      <input type="text" id="stringInput" placeholder="Enter a string" />
+      <button onclick="sortString()">Sort</button>
+      <h3 id="result"></h3>
+    </div>
+    <script>
+      function sortString() {
+        let str = document.getElementById("stringInput").value;
+        let sortedStr = str.split("").sort().join("");
+        document.getElementById("result").innerText =
+          "Sorted String: " + sortedStr;
+      }
+    </script>
+  </body>
+</html>

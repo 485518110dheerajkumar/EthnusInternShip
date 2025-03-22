@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Date and Time DHEERAJ KUMAR TASK4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 8px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #date,
+        #time {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .content{
+            background-color: yellowgreen;
+            padding: 2em;
+            color: white;
+            box-shadow: 10px 10px 20px rgb(71, 164, 24);
+            border-radius: 4px;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>What's! Today Date and Time</h1>
+        <button onclick="showDate()">Show Date</button>
+        <p id="date">Date is Here</p>
+
+        <button onclick="showTime()">Show Time</button>
+        <p id="time">Time is Here</p>
+    </div>
+    <script>
+        function showDate() {
+            let today = new Date();
+            let day = today.getDate();
+            let month = today.toLocaleString('default', { month: 'long' });
+            let year = today.getFullYear();
+            document.getElementById("date").innerText = `${day}/${month}/${year}`;
+        }
+
+        function showTime() {
+            let now = new Date();
+            document.getElementById("time").innerText = now.toString();
+        }
+    </script>
+
+</body>
+
+</html>
