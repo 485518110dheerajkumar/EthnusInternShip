@@ -38,5 +38,18 @@ Task 6 :- Link: https://485518110dheerajkumar.github.io/EthnusInternShip/CssTASK
 Task 7 :- Link: https://485518110dheerajkumar.github.io/EthnusInternShip/CssTASK7.HTML
 
 
+---------------------  Javascript ---------------------------------------------------------------------
+
+Task 1: Link: https://485518110dheerajkumar.github.io/EthnusInternShip//Javascript/Task1
+Task 2: Link: https://485518110dheerajkumar.github.io/EthnusInternShip//Javascript/Task2
+Task 3: Link: https://485518110dheerajkumar.github.io/EthnusInternShip//Javascript/calculator.html
+Task 4: Link: https://485518110dheerajkumar.github.io/EthnusInternShip//Javascript/Task4
+Task 5: Link: https://485518110dheerajkumar.github.io/EthnusInternShip//Javascript/Task5
+Task 6: Link: https://485518110dheerajkumar.github.io/EthnusInternShip//Javascript/Task6
+Task 7: Link: https://485518110dheerajkumar.github.io/EthnusInternShip//Javascript/Task7
+Task 8: Link: https://485518110dheerajkumar.github.io/EthnusInternShip//Javascript/Task8
+Task 9: Link: https://485518110dheerajkumar.github.io/EthnusInternShip/Javascript/Task9/
+
+
 
 ................................   Thankyou for visiting my work   .....................
